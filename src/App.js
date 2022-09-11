@@ -29,13 +29,13 @@ const Routing = () => {
   return (
     <Routes>
       <Route path='/' >
-        {admin && <Route index={true} element={<Dashboard />} />}
-        {admin && <Route path='pendingoutpasses' element={<PendingOutpass />} />}
-        {admin && <Route path='approvedoutpasses' element={<ApprovedOutpass />} />}
-        {admin && <Route path='uploadpost' element={<UploadPost />} />}
-        {admin && <Route path='manageposts' element={<ManagePosts />} />}
-        <Route path='adminsignin' index={true} element={<SignIn />} />
-      <Route path='adminsignup' index={true} element={<SignUp />} />
+        {admin && <Route index element={<Dashboard />} exact />}
+        {admin && <Route path='pendingoutpasses' element={<PendingOutpass />} exact/>}
+        {admin && <Route path='approvedoutpasses' element={<ApprovedOutpass />} exact/>}
+        {admin && <Route path='uploadpost' element={<UploadPost />} exact/>}
+        {admin && <Route path='manageposts' element={<ManagePosts />} exact/>}
+        <Route path='adminsignin' index={true} element={<SignIn />} exact/>
+      <Route path='adminsignup' index={true} element={<SignUp />} exact/>
       </Route>
       
     </Routes>
