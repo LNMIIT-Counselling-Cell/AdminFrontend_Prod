@@ -30,14 +30,13 @@ const Routing = () => {
     <Routes>
       <Route path='/' >
         {admin && <Route index element={<Dashboard />} exact />}
-        {admin && <Route path='pendingoutpasses' element={<PendingOutpass />} exact/>}
-        {admin && <Route path='approvedoutpasses' element={<ApprovedOutpass />} exact/>}
-        {admin && <Route path='uploadpost' element={<UploadPost />} exact/>}
-        {admin && <Route path='manageposts' element={<ManagePosts />} exact/>}
-        <Route path='adminsignin' index={true} element={<SignIn />} exact/>
-      <Route path='adminsignup' index={true} element={<SignUp />} exact/>
       </Route>
-      
+      {admin && <Route path='/pendingoutpasses' element={<PendingOutpass />} exact/>}
+        {admin && <Route path='/approvedoutpasses' element={<ApprovedOutpass />} exact/>}
+        {admin && <Route path='/uploadpost' element={<UploadPost />} exact/>}
+        {admin && <Route path='/manageposts' element={<ManagePosts />} exact/>}
+        <Route path='/adminsignin' index={true} element={<SignIn />} exact/>
+      <Route path='/adminsignup' index={true} element={<SignUp />} exact/>
     </Routes>
   )
 }
