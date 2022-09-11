@@ -34,8 +34,8 @@ const Routing = () => {
         {admin && <Route path='approvedoutpasses' element={<ApprovedOutpass />} />}
         {admin && <Route path='uploadpost' element={<UploadPost />} />}
         {admin && <Route path='manageposts' element={<ManagePosts />} />}
-        <Route path='/adminsignin' index={true} element={<SignIn />} />
-      <Route path='/adminsignup' index={true} element={<SignUp />} />
+        <Route path='adminsignin' index={true} element={<SignIn />} />
+      <Route path='adminsignup' index={true} element={<SignUp />} />
       </Route>
       
     </Routes>
