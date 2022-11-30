@@ -51,7 +51,7 @@ const SignUp = () => {
 
   const createAdmin = () => {
     setRefreshLoading(true);
-    axios.post(process.env.REACT_APP_API_URL+'adminsignup', adminData)
+    axios.post(process.env.REACT_APP_API_URL + 'adminsignup', adminData)
       .then(response => {
         console.log(response.data);
         setRefreshLoading(false);

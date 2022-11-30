@@ -146,7 +146,7 @@ export default function ManagePosts() {
 
   const getAllPosts = () => {
     setRefreshLoading(true)
-    axios.get(process.env.REACT_APP_API_URL+'allposts', {
+    axios.get(process.env.REACT_APP_API_URL + 'allposts', {
       headers: {
         'Authorization': 'Bearer ' + localStorage.getItem('jwt_token')
       }
@@ -164,7 +164,7 @@ export default function ManagePosts() {
 
   const DeletePost = (postId) => {
     setRefreshLoading(true)
-    axios.delete(process.env.REACT_APP_API_URL+`deletepost/${postId}`, {
+    axios.delete(process.env.REACT_APP_API_URL + `deletepost/${postId}`, {
       headers: {
         'Authorization': 'Bearer ' + localStorage.getItem('jwt_token')
       }

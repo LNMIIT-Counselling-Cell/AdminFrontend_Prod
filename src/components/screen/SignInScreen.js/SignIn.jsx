@@ -3,7 +3,6 @@ import styles from './SignIn.module.css'
 import { Link, useNavigate } from "react-router-dom";
 import settingIcon from '../../../assets/icons/signup.png'
 import axios from 'axios';
-import { ThreeCircles } from 'react-loader-spinner'
 import { AdminContext } from '../../../App';
 import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
@@ -51,7 +50,7 @@ const SignUp = () => {
 
   const loginAdmin = () => {
     setRefreshLoading(true);
-    axios.post(process.env.REACT_APP_API_URL+'adminsignin', adminData)
+    axios.post(process.env.REACT_APP_API_URL + 'adminsignin', adminData)
       .then(response => {
         console.log(response.data);
         setRefreshLoading(false);
